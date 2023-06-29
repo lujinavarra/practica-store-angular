@@ -1,12 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { ShoppingCartService } from '../../services/shopping-carts.service';
+
 
 @Component({
   selector: 'app-header',
   template: `
     <mat-toolbar color="primary">
       <span>My Store</span>
-      {{ quantity$ | async | json}} -Quantity
+      <span class="spacer"></span>
+      <app-cart></app-cart>
+
+      <!-- {{ quantity$ | async | json}} -Quantity
+      {{ total$ | async | json}} -Total -->
+      <!-- {{ cart$ | async | json}} -Cart -->
     </mat-toolbar>
   `
     ,
@@ -14,9 +19,5 @@ import { ShoppingCartService } from '../../services/shopping-carts.service';
 })
 
 export class HeaderComponent {
-  quantity$ = this.shoppingCartSvc.quantityAction$;
-  total$ = this.shoppingCartSvc.totalAction$
-  cart$ = this.shoppingCartSvc.CartAction$;
-  constructor( private shoppingCartSvc: ShoppingCartService){}
-
+  
 }
