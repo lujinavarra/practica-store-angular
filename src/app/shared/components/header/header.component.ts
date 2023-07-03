@@ -8,10 +8,6 @@ import { Component, OnInit } from '@angular/core';
       <span>My Store</span>
       <span class="spacer"></span>
       <app-cart></app-cart>
-
-      <!-- {{ quantity$ | async | json}} -Quantity
-      {{ total$ | async | json}} -Total -->
-      <!-- {{ cart$ | async | json}} -Cart -->
     </mat-toolbar>
   `
     ,
